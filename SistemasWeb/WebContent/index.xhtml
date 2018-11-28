@@ -1,0 +1,27 @@
+<!DOCTYPE html> 
+<ui:composition  xmlns="http://www.w3.org/1999/xhtml"
+                 xmlns:h="http://java.sun.com/jsf/html"
+                 xmlns:f="http://java.sun.com/jsf/core"
+                 xmlns:ui="http://java.sun.com/jsf/facelets"
+                 template="template/template.xhtml" > 
+
+    <ui:param name="tituloPagina" value="Inicio de session" />  
+
+    <ui:define name="content">
+       <center>
+	       <div class="login"> 
+	            <h3>Iniciar Session</h3>
+	            <h:form>
+	                   <h:panelGrid columns="2"> 
+	                        <h:outputLabel value="Usuario" /> 
+	                        <h:inputText value="#{loginMB.usuario}"  class="validate"/>
+	                        <h:outputLabel value="Password" /> 
+	                        <h:inputSecret value="#{loginMB.password}" class="validate"/>
+	                        <h:commandButton action="#{loginMB.existes()}" value="Enviar" />
+	                   </h:panelGrid>
+	            </h:form>
+	        </div>
+        <h:messages/>
+        </center>
+     </ui:define> 
+</ui:composition>

@@ -1,0 +1,56 @@
+<!DOCTYPE html> 
+<html lang="es" xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:h="http://java.sun.com/jsf/html"
+      xmlns:f="http://java.sun.com/jsf/core"
+      xmlns:ui="http://java.sun.com/jsf/facelets"
+      xmlns:p="http://primefaces.org/ui"> 
+      
+    
+      <f:view contentType="text/html">
+        <h:head>
+           <meta content='text/html; charset=UTF-8' http-equiv="Content-Type"/>
+           <h:outputStylesheet library="css" name="style.css" />
+           <title>#{tituloPagina}</title>
+        </h:head>
+        
+        <h:body>
+
+            <p:layout fullPage="true">
+             
+                <p:layoutUnit styleClass="header" position="north" size="100" resizable="true" closable="true" collapsible="true" >
+                 <div>
+		            <div class="top_left">
+		           			 <H2>Lener<strong>C@B</strong></H2>
+		            </div>
+		         </div>
+                </p:layoutUnit> 
+               
+                <p:layoutUnit styleClass="foot" position="south" size="100" closable="true" collapsible="true">
+                  
+                </p:layoutUnit>
+
+                <p:layoutUnit position="west" size="175" header="Left" collapsible="true">
+                    <p:menu>
+                        <p:submenu label="Resources">
+                            <p:menuitem value="Inicio" url="http://www.primefaces.org/showcase-labs/ui/home.jsf" />
+                            <p:menuitem value="Quienes Somos" url="http://www.primefaces.org/documentation.html" />
+                            <p:menuitem value="Vision" url="http://forum.primefaces.org/" />
+                            <p:menuitem value="Mision" url="http://www.primefaces.org/themes.html" />
+
+                        </p:submenu>
+
+                    </p:menu>
+                </p:layoutUnit>
+
+                <p:layoutUnit position="center">
+                    <ui:insert name="content" />
+                </p:layoutUnit>
+
+            </p:layout>
+
+        </h:body>
+
+    </f:view>
+    
+  
+</html>
